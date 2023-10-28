@@ -1,8 +1,10 @@
 import { Router, Request, Response } from "express";
-import { addUser, listAllUsers } from "./controllers/crudController";
+import { addUser, deleteUser, listAllUsers, updateUser } from "./controllers/crudController";
 
 const router = Router()
 
 export default router
-  .get("/test", listAllUsers)
+  .get("/list", listAllUsers)
   .post("/register", addUser)
+  .patch("/edit", updateUser)
+  .delete("/delete", deleteUser)
