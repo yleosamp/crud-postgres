@@ -10,3 +10,13 @@ export const db = new Client({
   database: env.DB_NAME,
   user: env.DB_USER
 })
+
+export const createTable = async () => {
+  return await db.query(`CREATE TABLE IF NOT EXISTS teste(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(60),
+    data_nasc DATE,
+    idade INTEGER,
+    apelido VARCHAR(20)
+  );`)
+}

@@ -1,6 +1,6 @@
 import express from 'express'
 import router from './router'
-import { db } from './model/db'
+import { createTable, db } from './model/db'
 
 // Middlewares
 const app = express()
@@ -11,6 +11,7 @@ app.use("/api/", router)
 const port = 3000
 app.listen(port, async () => {
   await db.connect()
+  await createTable()
   console.log("Banco de dados conectado com sucesso!")
   console.log(`Servidor ligado na porta ${port}!`)
 })
