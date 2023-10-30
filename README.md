@@ -23,6 +23,7 @@ Esta API CRUD conta com algumas funcionalidades simples, seguindo o CRUD.
 "apelido": "String"
 ```
 ```/api/edit``` **PATCH** - Esta rota aceita os mesmos campos que a de registro(acima), porém com adição do campo ```"id": number```. Este ID deverá ser o do usuário a ser editado.
+
 ```/api/delete``` **DELETE** - Rota que aceita o ID do usuário a ser deletado.
 
 # SETUP - Iniciar o servidor
